@@ -39,33 +39,26 @@
     <div class="row">
 
       <!--Rows have columns - column 1 (7/12) -->
-      <div class="col-md-7 mb-4">
+      <div id="multiplier" class="col-md-7 mb-4">
 
-        <h2>App challenge</h2>
+        <h2>App Challenge</h2>
         <hr>
 
-        <!-- <fieldset class="mt-4">
-          <label for="guest">Enter your name (2 to 40 characters):</label>
-          <input id="guest" type="text" minlength="2" maxlength="40" value="Lilly">
-        </fieldset> -->
-
         <fieldset class="mt-4">
-          <label for="firstNumber">Enter first number (1 to 100):</label>
-          <input id="firstNumber" type="number" min="1" max="100" value=5>
+          <label for="items">Enter number of items (1 to 100):</label>
+          <input v-model="items" id="items" type="number" min="1" max="100">
           <span id="firstWarning" class="text-danger"></span>
         </fieldset>
 
         <fieldset class="mt-4">
-          <label for="secondNumber">Enter second number (1 to 100):</label>
-          <input id="secondNumber" type="number" min="1" max="100" value="6">
-          <span id="secondWarning" class="text-danger"></span>  
-        </fieldset>
+          <label for="sizeEach">Enter size of item (1 to 100):</label>
+          <input v-model="sizeEach" id="sizeEach" type="number" min="1" max="100">
+          <span id="secondWarning" class="text-danger"></span><br>
+          <br>
 
-          <fieldset class="mt-4">
-           <input type="button" onClick="multiplyBy()" Value="Multiply" />
-        </fieldset>  
-        <span id = "result"></span>
-      <!-- end column 2-->
+        </fieldset>
+        <p>{{answer}}</p>
+      </div>
 
     </div>
     <!-- end row 1 -->
@@ -73,14 +66,25 @@
   </main>
 
   <!-- sticky footer with padding on y-axis (top and bottom) -->
-  
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">Right-click / Inspect / Console</span>
+      &#9670;
+      <span class="text-muted"><a href="test/qunit.html">View Tests</a></span>
+      &#9670;
+      <a href="https://profcase.github.io/js-gui-with-tests/">Demo</a>
+      &#9670;
+      <a href="https://github.com/profcase/js-gui-with-tests">Source</a>
+    </div>
+  </footer>
 
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
 
-  <script src="src/main.js"></script>
+  <script src="./components/multiplier/multiplier.js"></script>
 
 </body>
 
