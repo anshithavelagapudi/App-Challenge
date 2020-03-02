@@ -1,4 +1,6 @@
-function multiply(){
-        var ans= (document.form.one.value)*(document.form.two.value)
-        document.form.answer.value=ans;
-        }
+function multiplyBy()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 * num2;
+}
