@@ -12,17 +12,17 @@
 //   }
 // }
 
-// const updateWithAdd = async (event) => {
-//   document.querySelector('#result').innerHTML = '';
-//   if (document.querySelector('#firstNumber').checkValidity() && document.querySelector('#secondNumber').checkValidity()) {
-//     const regex = /[^a-zA-Z_]/g
-//     const s = document.querySelector('#guest').value.replace(regex, '')
-//     const i = parseInt(document.querySelector('#firstNumber').value)
-//     const j = parseInt(document.querySelector('#secondNumber').value)
-//     const ans = `${s}, your sum is ${add(i, j)}.`
-//     document.querySelector('#result').innerHTML = ans
-//   }
-// }
+ const updateWithAdd = async (event) => {
+   document.querySelector('#result').innerHTML = '';
+   if (document.querySelector('#firstNumber').checkValidity() && document.querySelector('#secondNumber').checkValidity()) {
+     const regex = /[^a-zA-Z_]/g
+     const s = document.querySelector('#guest').value.replace(regex, '')
+     const i = parseInt(document.querySelector('#firstNumber').value)
+     const j = parseInt(document.querySelector('#secondNumber').value)
+     const ans = `${s}, your sum is ${multiply(i, j)}.`
+     document.querySelector('#result').innerHTML = ans
+   }
+ }
 
 // const updateWithJoke = async (event) => {
 //   document.querySelector('#result').innerHTML = ''
@@ -43,9 +43,9 @@
 //   }
 // });
 
-// document.addEventListener('click', event => {
-//   if (event.target && event.target.id === 'addButton') { updateWithAdd(event) }
-// });
+ document.addEventListener('click', event => {
+   if (event.target && event.target.id === 'addButton') { updateWithAdd(event) }
+ });
 
 // document.addEventListener('click', event => {
 //   if (event.target && event.target.id === 'getJokeButton') { updateWithJoke(event) }
